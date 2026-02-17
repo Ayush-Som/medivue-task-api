@@ -21,7 +21,7 @@ Task Management API built with FastAPI, PostgreSQL, SQLAlchemy (async), and Dock
 1. Copy env example (optional)
    - `cp .env.example .env`
 2. Start services
-   - `docker-compose up --build`
+   - `docker compose up --build`
 3. Open docs
    - http://localhost:8000/docs
 
