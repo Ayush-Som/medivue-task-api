@@ -77,3 +77,22 @@ Production uses PostgreSQL via docker-compose.
 - Background jobs for reminders and due-date notifications
 - Input hardening and security scanning in CI
 - CI/CD pipeline with tests, linting, container builds
+
+## Example Usage
+
+Create a task:
+
+curl -X POST http://localhost:8000/tasks \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "Prepare report",
+    "description": "Quarterly analytics",
+    "priority": 3,
+    "due_date": "2030-01-01",
+    "tags": ["work", "urgent"]
+  }'
+
+Filter by tag:
+
+GET /tasks?tags=work
+
